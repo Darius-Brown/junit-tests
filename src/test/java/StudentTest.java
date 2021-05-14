@@ -35,4 +35,25 @@ public class StudentTest {
         assertEquals(73.33333333333333, studentWithManyGrades.getGradeAverage(), 0);
     }
 
+    // returns the student's id
+    public long getId() {
+        return this.id;
+    }
+    // returns the student's name
+    public String getName(){
+        return this.name;
+    }
+    // adds the given grade to the grades list
+    public void addGrade(int grade){
+        this.grades.add(grade);
+    }
+    // returns the average of the students grades
+    public double getGradeAverage(){
+        double result = 0;
+        for (int grade : this.getGrades()) {
+            result += grade;
+        }
+        return result / this.getGrades().size();
+    }
+
 }
